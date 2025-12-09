@@ -55,7 +55,13 @@ export default defineConfig({
     },
   },
 },
+
+logo: {
+        src: '/NixOS.svg',
+        alt: "Rene's Avatar"
+    },
     nav: [
+    
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/markdown-examples' }
     ],

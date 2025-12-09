@@ -6,6 +6,7 @@ hero:
   name: "Rene's blog"
   text: "C'est mon blog"
   tagline: My great project tagline
+ 
   image:
     light: /dark.jpeg
     dark: /light.jpeg
