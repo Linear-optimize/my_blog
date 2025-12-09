@@ -72,7 +72,7 @@ logo: {
         items: [
           { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' },
-          {text:'math demo',link:'/.vitepress/post/math'}
+          {text:'math demo',link:'/post/math'}
         ]
       }
     ],

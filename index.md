@@ -19,7 +19,7 @@ hero:
       link: /api-examples
     - theme: brand
       text: math demo
-      link: /.vitepress/post/math  
+      link: /post/math  
 
 features:
   - title: Feature A
