@@ -45,8 +45,16 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     search: {
-      provider: "local",
+  provider: "local",
+  options: {
+    detailedView: true,   // 在搜索结果中展示更多内容
+    miniSearch: {
+      searchOptions: {
+        boost: { title: 4, text: 2 }, // 标题的权重更高
+      },
     },
+  },
+},
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/markdown-examples' }
@@ -64,7 +72,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/Linear-optimize' }
     ]
   }
 })

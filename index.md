@@ -6,6 +6,9 @@ hero:
   name: "Rene's blog"
   text: "C'est mon blog"
   tagline: My great project tagline
+  image:
+    light: /dark.jpeg
+    dark: /light.jpeg
   actions:
     - theme: brand
       text: Markdown Examples
@@ -13,7 +16,7 @@ hero:
     - theme: alt
       text: API Examples
       link: /api-examples
-    - theme: math
+    - theme: alt
       text: math demo
       link: /math  
 
