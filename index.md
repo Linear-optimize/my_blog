@@ -13,10 +13,10 @@ hero:
     - theme: brand
       text: Markdown Examples
       link: /markdown-examples
-    - theme: alt
+    - theme: brand
       text: API Examples
       link: /api-examples
-    - theme: alt
+    - theme: brand
       text: math demo
       link: /math  
 
