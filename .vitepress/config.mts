@@ -1,84 +1,132 @@
-import { defineConfig } from 'vitepress';
-import texmath from 'markdown-it-texmath';
-import readingTime from "reading-time";
+import { defineConfig } from 'vitepress'
+import texmath from 'markdown-it-texmath'
+import readingTime from 'reading-time'
 
-
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-   markdown: {
+
+  markdown: {
     config(md) {
-      // ✅ 数学公式（KaTeX）
+     
       md.use(texmath, {
-        engine: "katex",
-        delimiters: "dollars",
+        engine: 'katex',
+        delimiters: 'dollars',
         katexOptions: {
           displayMode: true,
           throwOnError: false,
         },
-      });
+      })
 
-      // ✅ 阅读时间（注入 frontmatter）
-      md.core.ruler.push("reading-time", (state) => {
-        const text = state.src;
-        const stats = readingTime(text);
+     
+      md.core.ruler.push('reading-time', (state) => {
+        const stats = readingTime(state.src)
 
-        state.env.frontmatter ||= {};
+        state.env.frontmatter ||= {}
         state.env.frontmatter.readingTime = {
           minutes: Math.ceil(stats.minutes),
           words: stats.words,
-        };
-      });
+        }
+      })
     },
   },
 
-  // ✅ 允许 <eqn> 自定义标签（消除 Vue warn）
+  
   vue: {
     template: {
       compilerOptions: {
-        isCustomElement: (tag) => tag === "eqn",
+        isCustomElement: (tag) => tag === 'eqn',
       },
     },
   },
+
+
+  locales: {
     
-  title: "Rene's blog",
-  description: "C'est mon blog",
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    search: {
-  provider: "local",
-  options: {
-    detailedView: true,   // 在搜索结果中展示更多内容
-    miniSearch: {
-      searchOptions: {
-        boost: { title: 4, text: 2 }, // 标题的权重更高
+    root: {
+      label: '简体中文',
+      lang: 'zh-CN',
+      title: "Rene's blog",
+      description: '这是我的博客',
+
+      themeConfig: {
+        logo: {
+          src: '/NixOS.svg',
+          alt: "Rene's Avatar",
+        },
+
+        nav: [
+          { text: '首页', link: '/' },
+          { text: '示例', link: '/markdown-examples' },
+        ],
+
+        sidebar: [
+          {
+            text: '示例',
+            items: [
+              { text: 'Markdown 示例', link: '/markdown-examples' },
+              { text: 'API 示例', link: '/api-examples' },
+              { text: '数学演示', link: '/post/math' },
+            ],
+          },
+        ],
+
+        socialLinks: [
+          { icon: 'github', link: 'https://github.com/Linear-optimize' },
+        ],
+      },
+    },
+
+    /* ---------- English ---------- */
+    en: {
+      label: 'English',
+      lang: 'en-US',
+      link: '/en/',
+      title: "Rene's Blog",
+      description: 'This is my blog',
+
+      themeConfig: {
+        nav: [
+          { text: 'Home', link: '/en/' },
+          { text: 'Examples', link: '/en/markdown-examples' },
+        ],
+
+        sidebar: [
+          {
+            text: 'Examples',
+            items: [
+              { text: 'Markdown Examples', link: '/en/markdown-examples' },
+              { text: 'API Examples', link: '/en/api-examples' },
+              { text: 'Math Demo', link: '/en/math' },
+            ],
+          },
+        ],
+      },
+    },
+
+    
+    fr: {
+      label: 'Français',
+      lang: 'fr-FR',
+      link: '/fr/',
+      title: 'Blog de Rene',
+      description: 'Ceci est mon blog',
+
+      themeConfig: {
+        nav: [
+          { text: 'Accueil', link: '/fr/' },
+          { text: 'Exemples', link: '/fr/markdown-examples' },
+        ],
+
+        sidebar: [
+          {
+            text: 'Exemples',
+            items: [
+              { text: 'Exemples Markdown', link: '/fr/markdown-examples' },
+              { text: 'Exemples API', link: '/fr/api-examples' },
+              { text: 'Démo Math', link: '/fr/math' },
+            ],
+          },
+        ],
       },
     },
   },
-},
-
-logo: {
-        src: '/NixOS.svg',
-        alt: "Rene's Avatar"
-    },
-    nav: [
-    
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-          {text:'math demo',link:'/post/math'}
-        ]
-      }
-    ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/Linear-optimize' }
-    ]
-  }
 })
