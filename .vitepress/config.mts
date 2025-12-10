@@ -2,7 +2,14 @@ import { defineConfig } from 'vitepress'
 import texmath from 'markdown-it-texmath'
 import readingTime from 'reading-time'
 
+
+
 export default defineConfig({
+    themeConfig: {
+    search: { provider: 'local' },
+    nav: [{ text: '首页', link: '/' }],
+  },
+  
 
   markdown: {
     config(md) {
@@ -48,6 +55,7 @@ export default defineConfig({
       description: '这是我的博客',
 
       themeConfig: {
+        search: { provider: 'local' },
         logo: {
           src: '/NixOS.svg',
           alt: "Rene's Avatar",
@@ -84,6 +92,7 @@ export default defineConfig({
       description: 'This is my blog',
 
       themeConfig: {
+      search: { provider: 'local' },
         nav: [
           { text: 'Home', link: '/en/' },
           { text: 'Examples', link: '/en/markdown-examples' },
@@ -111,6 +120,7 @@ export default defineConfig({
       description: 'Ceci est mon blog',
 
       themeConfig: {
+      search: { provider: 'local' },
         nav: [
           { text: 'Accueil', link: '/fr/' },
           { text: 'Exemples', link: '/fr/markdown-examples' },
