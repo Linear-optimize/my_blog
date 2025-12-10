@@ -1,15 +1,20 @@
-import { defineConfig } from 'vitepress'
+// import { defineConfig } from 'vitepress'
 import texmath from 'markdown-it-texmath'
 import readingTime from 'reading-time'
+import { withMermaid } from "vitepress-plugin-mermaid";
 
 
-
-export default defineConfig({
+export default withMermaid({
     themeConfig: {
     search: { provider: 'local' },
     nav: [{ text: '首页', link: '/' }],
   },
   
+  mermaid: {
+    theme: 'default',
+    startOnLoad: true,
+    flowchart: { curve: 'basis' },
+  },
 
   markdown: {
     config(md) {
