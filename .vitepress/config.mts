@@ -68,15 +68,15 @@ export default withMermaid({
 
         nav: [
           { text: '首页', link: '/' },
-          { text: '示例', link: '/markdown-examples' },
+          { text: '示例', link: '/post/markdown-examples' },
         ],
 
         sidebar: [
           {
             text: '示例',
             items: [
-              { text: 'Markdown 示例', link: '/markdown-examples' },
-              { text: 'API 示例', link: '/api-examples' },
+              { text: 'Markdown 示例', link: '/post/markdown-examples' },
+              { text: 'API 示例', link: '/post/api-examples' },
               { text: '数学演示', link: '/post/math' },
             ],
           },
