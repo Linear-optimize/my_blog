@@ -71,7 +71,7 @@ export default withMermaid({
         },
 
         nav: [
-          { text: '首页', link: '/' },
+          { text: '首页', link: '/post/' },
           { text: '示例', link: '/post/markdown-examples' },
         ],
 
