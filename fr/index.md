@@ -13,13 +13,13 @@ hero:
   actions:
     - theme: brand
       text: Markdown Examples
-      link: /markdown-examples
+      link: /fr/markdown-examples
     - theme: brand
       text: API Examples
-      link: /api-examples
+      link: /fr/api-examples
     - theme: brand
       text: math demo
-      link: /post/math  
+      link: /fr/math  
 
 features:
   - title: Feature A
