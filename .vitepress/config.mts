@@ -102,6 +102,10 @@ export default withMermaid({
 
       themeConfig: {
       search: { provider: 'local' },
+       logo: {
+          src: '/NixOS.svg',
+          alt: "Rene's Avatar",
+        },
         nav: [
           { text: 'Home', link: '/en/' },
           { text: 'Examples', link: '/en/markdown-examples' },
@@ -130,6 +134,10 @@ export default withMermaid({
 
       themeConfig: {
       search: { provider: 'local' },
+       logo: {
+          src: '/NixOS.svg',
+          alt: "Rene's Avatar",
+        },
         nav: [
           { text: 'Accueil', link: '/fr/' },
           { text: 'Exemples', link: '/fr/markdown-examples' },
