@@ -5,6 +5,7 @@ import { withMermaid } from "vitepress-plugin-mermaid";
 
 
 export default withMermaid({
+    base:'/my_blog/',
     themeConfig: {
     search: { provider: 'local' },
     nav: [{ text: '首页', link: '/' }],
