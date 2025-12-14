@@ -2,7 +2,8 @@
   "devDependencies": {
     "mermaid": "^11.12.2",
     "vitepress": "^1.6.4",
-    "vitepress-plugin-mermaid": "^2.0.17"
+    "vitepress-plugin-mermaid": "^2.0.17",
+    "wl-live2d": "^1.0.8"
   },
   "scripts": {
     "docs:dev": "vitepress dev",
@@ -13,7 +14,6 @@
     "@catppuccin/vitepress": "^0.1.2",
     "katex": "^0.16.27",
     "markdown-it-texmath": "^1.0.0",
-    "oh-my-live2d": "^0.19.3",
     "reading-time": "^1.5.0"
   }
 }
