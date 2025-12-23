@@ -5,15 +5,15 @@ import { withMermaid } from "vitepress-plugin-mermaid";
 
 
 export default withMermaid({
+  appearance: 'dark',
+  base: '/my_blog/',
 
-    base:'/my_blog/',
 
-    
-    themeConfig: {
+  themeConfig: {
     search: { provider: 'local' },
     nav: [{ text: '首页', link: '/' }],
   },
-  
+
   mermaid: {
     theme: 'default',
     startOnLoad: true,
@@ -22,7 +22,7 @@ export default withMermaid({
 
   markdown: {
     config(md) {
-     
+
       md.use(texmath, {
         engine: 'katex',
         delimiters: 'dollars',
@@ -32,7 +32,7 @@ export default withMermaid({
         },
       })
 
-     
+
       md.core.ruler.push('reading-time', (state) => {
         const stats = readingTime(state.src)
 
@@ -45,7 +45,7 @@ export default withMermaid({
     },
   },
 
-  
+
   vue: {
     template: {
       compilerOptions: {
@@ -56,7 +56,7 @@ export default withMermaid({
 
 
   locales: {
-    
+
     root: {
       label: '简体中文',
       lang: 'zh-CN',
@@ -101,8 +101,8 @@ export default withMermaid({
       description: 'This is my blog',
 
       themeConfig: {
-      search: { provider: 'local' },
-       logo: {
+        search: { provider: 'local' },
+        logo: {
           src: '/NixOS.svg',
           alt: "Rene's Avatar",
         },
@@ -124,7 +124,7 @@ export default withMermaid({
       },
     },
 
-    
+
     fr: {
       label: 'Français',
       lang: 'fr-FR',
@@ -133,8 +133,8 @@ export default withMermaid({
       description: 'Ceci est mon blog',
 
       themeConfig: {
-      search: { provider: 'local' },
-       logo: {
+        search: { provider: 'local' },
+        logo: {
           src: '/NixOS.svg',
           alt: "Rene's Avatar",
         },
