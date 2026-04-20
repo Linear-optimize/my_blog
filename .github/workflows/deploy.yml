@@ -11,13 +11,25 @@ permissions:
   pages: write
   id-token: write
 
+# 确保同时只有一个部署任务在运行，避免冲突
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 如果你使用了 VitePress 的最后更新时间功能，建议开启
+
+      # 显式设置 Node.js 环境，解决弃用警告
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
       - name: Install bun
         uses: oven-sh/setup-bun@v2
@@ -38,11 +50,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
