@@ -11,8 +11,7 @@ $$
 
 你好
 
-![7db82a00cfe99aa007cc82f16d212091.jpeg](https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAEMX4dpN8c1Sli2daJ7u2iry3Is3IQAAUYAAjkcAAKSg8BVmq_zsFFljUo2BA.jpeg)
-
+![](https://gitee.com/pochinski/image_bed/raw/master/11ae7b1f420937be19229d79918566de.jpg)
 
 ---
 
