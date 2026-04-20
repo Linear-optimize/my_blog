@@ -13,6 +13,8 @@ $$
 
 ![](/public/image1.jpg)
 
+![](https://cdn.statically.io/gh/Linear-optimize/image_bed/master/27d07078f0d027d71409be4ac62dbe63.jpg)
+
 ---
 
 ```mermaid
