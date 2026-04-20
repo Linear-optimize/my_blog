@@ -34,12 +34,12 @@
 
 /* background image */
 body::before {
-    background-image: url('/public/image3.jpg');
+    background-image: url('/public/image4.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
-    filter: blur(3px) brightness(0.4);
+    filter: blur(3px) brightness(0.7);
 
     content: '';
     inset: 0;
