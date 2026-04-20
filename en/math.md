@@ -11,4 +11,4 @@ $$
 
 Hello
 
-![](https://gitee.com/pochinski/image_bed/raw/master/11ae7b1f420937be19229d79918566de.jpg)
+![](https://cdn.jsdelivr.net/gh/Linear-optimize/image_bed/129d4b3d-3030-48e0-90d1-ee1c5df6128d.png)
