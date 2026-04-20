@@ -11,7 +11,7 @@ $$
 
 你好
 
-![](https://cdn.jsdelivr.net/gh/Linear-optimize/image_bed/129d4b3d-3030-48e0-90d1-ee1c5df6128d.png)
+![](/public/image1.jpg)
 
 ---
 

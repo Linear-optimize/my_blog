@@ -34,7 +34,7 @@
 
 /* background image */
 body::before {
-    background-image: url('https://cdn.jsdelivr.net/gh/Linear-optimize/image_bed/image1.png');
+    background-image: url('/public/image3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
