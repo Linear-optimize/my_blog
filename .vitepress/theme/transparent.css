@@ -34,7 +34,7 @@
 
 /* background image */
 body::before {
-    background-image: url(https://gitee.com/pochinski/image_bed/raw/master/ChatGPT Image 2026年4月16日 14_58_24.png');
+    background-image: url('https://gitee.com/pochinski/image_bed/raw/master/ChatGPT Image 2026年4月16日 14_58_24.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
