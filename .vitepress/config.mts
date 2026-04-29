@@ -6,7 +6,7 @@ import { withMermaid } from "vitepress-plugin-mermaid";
 
 export default withMermaid({
   appearance: 'dark',
-  base: '/my_blog/',
+  base: '/',
 
 
 
