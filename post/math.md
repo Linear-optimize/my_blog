@@ -11,9 +11,9 @@ $$
 
 你好
 
-![](/public/image1.jpg)
+![](https://cloudflare-imgbed-s6m.pages.dev/file/1777878905340_2026-04-03-79cd961a3f3fb3a2388bed6ccbd4cf81.jpg)
 
-![](https://cdn.statically.io/gh/Linear-optimize/image_bed/master/27d07078f0d027d71409be4ac62dbe63.jpg)
+![](https://cloudflare-imgbed-s6m.pages.dev/file/1777878703734_2025-12-dc396fe642671d0c34ec919703238ddf.png)
 
 ---
 
