@@ -1,8 +1,14 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import DefaultTheme from "vitepress/theme";
 import { useData } from "vitepress";
+import { getMessage } from "../i18n";
 
-const { frontmatter } = useData();
+const { frontmatter, localeIndex } = useData();
+
+const readingTimeMessages = computed(() => {
+  return getMessage(localeIndex.value).readingTime;
+});
 </script>
 
 <template>
@@ -16,9 +22,9 @@ const { frontmatter } = useData();
           margin-bottom: 12px;
         "
       >
-        ⏱ 阅读时间
-        {{ frontmatter.readingTime.minutes }} 分钟 ·
-        {{ frontmatter.readingTime.words }} 字
+        ⏱ {{ readingTimeMessages.label }}
+        {{ frontmatter.readingTime.minutes }} {{ readingTimeMessages.minute }} ·
+        {{ frontmatter.readingTime.words }} {{ readingTimeMessages.word }}
       </div>
     </template>
   </DefaultTheme.Layout>
