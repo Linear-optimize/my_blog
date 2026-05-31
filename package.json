@@ -12,9 +12,10 @@
     "wl-live2d": "^1.0.8"
   },
   "scripts": {
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:dev": "pnpm docs:i18n && vitepress dev",
+    "docs:build": "pnpm docs:i18n && vitepress build",
+    "docs:preview": "vitepress preview",
+    "docs:i18n": "node .vitepress/scripts/generate-i18n-content.mjs"
   },
   "dependencies": {
     "@catppuccin/vitepress": "^0.1.2",
