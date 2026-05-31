@@ -13,16 +13,8 @@ A personal blog powered by **VitePress**, with math rendering, Mermaid diagrams,
 │   ├── api-examples.md
 │   ├── markdown-examples.md
 │   └── math.md
-├── en/                      # English pages
-│   ├── index.md
-│   ├── api-examples.md
-│   ├── markdown-examples.md
-│   └── math.md
-├── fr/                      # French pages
-│   ├── index.md
-│   ├── api-examples.md
-│   ├── markdown-examples.md
-│   └── math.md
+├── .vitepress/i18n-messages.mjs # Locale messages and Markdown translation dictionary
+├── .vitepress/scripts/       # Build-time i18n content generator
 ├── public/                  # Static assets (images, svg)
 ├── types/                   # Type declarations
 └── package.json             # Scripts and dependencies
@@ -59,7 +51,8 @@ npm run docs:preview
 - Math formula rendering in Markdown pages.
 - Mermaid diagram support.
 - Reading-time calculation support.
-- Multilingual content directories (`/`, `/en`, `/fr`).
+- Multilingual UI and generated English/French pages from the single `post/` Markdown source.
+- `pnpm docs:i18n` regenerates ignored `/en` and `/fr` output folders before dev/build.
 
 ---
 
@@ -78,16 +71,8 @@ npm run docs:preview
 │   ├── api-examples.md
 │   ├── markdown-examples.md
 │   └── math.md
-├── en/                      # 英文页面
-│   ├── index.md
-│   ├── api-examples.md
-│   ├── markdown-examples.md
-│   └── math.md
-├── fr/                      # 法语页面
-│   ├── index.md
-│   ├── api-examples.md
-│   ├── markdown-examples.md
-│   └── math.md
+├── .vitepress/i18n-messages.mjs # 多语言文案和 Markdown 翻译字典
+├── .vitepress/scripts/       # 构建时 i18n 内容生成脚本
 ├── public/                  # 静态资源（图片、svg）
 ├── types/                   # 类型声明
 └── package.json             # 脚本与依赖配置
@@ -124,4 +109,5 @@ npm run docs:preview
 - Markdown 页面中的数学公式渲染。
 - Mermaid 图表支持。
 - 文章阅读时长统计支持。
-- 多语言目录结构（`/`、`/en`、`/fr`）。
+- 多语言 UI，并从唯一的 `post/` Markdown 源自动生成英文/法文页面。
+- `pnpm docs:i18n` 会在开发/构建前重新生成被忽略的 `/en` 和 `/fr` 输出目录。

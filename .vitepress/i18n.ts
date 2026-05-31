@@ -1,4 +1,8 @@
 import type { DefaultTheme } from 'vitepress'
+import {
+  fallbackLocale as rawFallbackLocale,
+  messages as rawMessages,
+} from './i18n-messages.mjs'
 
 type NavMessages = {
   home: string
@@ -18,6 +22,22 @@ type ReadingTimeMessages = {
   word: string
 }
 
+type HomeFeatureMessages = {
+  title: string
+  details: string
+}
+
+type HomeMessages = {
+  heroText: string
+  tagline: string
+  actions: {
+    markdownExamples: string
+    apiExamples: string
+    mathDemo: string
+  }
+  features: HomeFeatureMessages[]
+}
+
 type LocaleMessage = {
   label: string
   lang: string
@@ -27,79 +47,14 @@ type LocaleMessage = {
   nav: NavMessages
   sidebar: SidebarMessages
   readingTime: ReadingTimeMessages
+  home: HomeMessages
 }
 
 export type LocaleKey = 'root' | 'en' | 'fr'
 
-export const fallbackLocale: LocaleKey = 'root'
+export const fallbackLocale = rawFallbackLocale as LocaleKey
 
-export const messages: Record<LocaleKey, LocaleMessage> = {
-  root: {
-    label: '简体中文',
-    lang: 'zh-CN',
-    title: "Rene's blog",
-    description: '这是我的博客',
-    nav: {
-      home: '首页',
-      examples: '示例',
-    },
-    sidebar: {
-      examples: '示例',
-      markdownExamples: 'Markdown 示例',
-      apiExamples: 'API 示例',
-      mathDemo: '数学演示',
-    },
-    readingTime: {
-      label: '阅读时间',
-      minute: '分钟',
-      word: '字',
-    },
-  },
-  en: {
-    label: 'English',
-    lang: 'en-US',
-    link: '/en/',
-    title: "Rene's Blog",
-    description: 'This is my blog',
-    nav: {
-      home: 'Home',
-      examples: 'Examples',
-    },
-    sidebar: {
-      examples: 'Examples',
-      markdownExamples: 'Markdown Examples',
-      apiExamples: 'API Examples',
-      mathDemo: 'Math Demo',
-    },
-    readingTime: {
-      label: 'Reading time',
-      minute: 'min',
-      word: 'words',
-    },
-  },
-  fr: {
-    label: 'Français',
-    lang: 'fr-FR',
-    link: '/fr/',
-    title: 'Blog de Rene',
-    description: 'Ceci est mon blog',
-    nav: {
-      home: 'Accueil',
-      examples: 'Exemples',
-    },
-    sidebar: {
-      examples: 'Exemples',
-      markdownExamples: 'Exemples Markdown',
-      apiExamples: 'Exemples API',
-      mathDemo: 'Démo Math',
-    },
-    readingTime: {
-      label: 'Temps de lecture',
-      minute: 'min',
-      word: 'mots',
-    },
-  },
-}
+export const messages = rawMessages as Record<LocaleKey, LocaleMessage>
 
 export const localeKeys = Object.keys(messages) as LocaleKey[]
 
@@ -124,9 +79,7 @@ const localizedPath = (locale: LocaleKey, path: string) => {
 }
 
 const postPath = (locale: LocaleKey, slug: string) => {
-  if (locale === 'root') return `/post/${slug}`
-
-  return localizedPath(locale, `/${slug}`)
+  return localizedPath(locale, `/post/${slug}`)
 }
 
 export const defineLocale = (locale: LocaleKey) => {
